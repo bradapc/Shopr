@@ -1,13 +1,20 @@
 import {Route, Routes, BrowserRouter, Link} from "react-router-dom";
+import Header from './Header';
+import Footer from "./Footer";
+import Portal from "./Portal";
+import Shop from "./Shop";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="rootHeader">Welcome to Shopr</h1>
+      <Header />
       <BrowserRouter>
-          <Link to="/shop" className="rootLink">Begin Shopping</Link>
-          <Link to="/orders" className="rootLink">View all Orders</Link>
+        <Routes>
+          <Route path="/" element={<Portal />} />
+          <Route path="/shop" element={<Shop />} />
+        </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
