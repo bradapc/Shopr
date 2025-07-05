@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "concurrently": "^9.2.0",
     "express": "^5.1.0",
+    "nodemon": "^3.1.10",
     "pg": "^8.16.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run react\"",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
