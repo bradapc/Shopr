@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from "./Footer";
 import Portal from "./Portal";
 import Shop from "./Shop";
+import AddCart from "./AddCart";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Portal />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/addcart" element={<AddCart />} />
         </Routes>
       </BrowserRouter>
       <Footer />
