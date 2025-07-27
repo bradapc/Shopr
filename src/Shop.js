@@ -17,6 +17,12 @@ const Shop = () => {
         setProducts(filteredProducts);
     };
 
+    const handleReset = () => {
+        setCategory('all');
+        setSearch("");
+        setProducts(allProducts);
+    };
+
     const handleChange = (e) => {
         setCategory(e.target.value);
     };
@@ -37,6 +43,7 @@ const Shop = () => {
         </select>
         <input
           type="text"
+          value={search}
           onChange={(e) => setSearch(e.target.value)}
           />
         <button
@@ -44,7 +51,8 @@ const Shop = () => {
           onClick={filterProducts}>Submit
         </button>
         <button
-          type="reset">Reset
+          type="reset"
+          onClick={handleReset}>Reset
           </button>
         <h3>All Products</h3>
         <ProductList 

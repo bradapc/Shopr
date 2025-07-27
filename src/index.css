@@ -35,3 +35,12 @@
 .productsRow {
   
 }
+
+.AddToCartText {
+  color: rgb(0, 132, 255);
+}
+
+.AddToCartText:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
